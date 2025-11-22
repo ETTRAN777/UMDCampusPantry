@@ -21,7 +21,7 @@
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  color: #b71c1c;
+  color: #e21832;
   text-align: center;
 }
 
@@ -122,7 +122,7 @@ footer {
     top: 10px;
     left: 10px;
     z-index: 1100;
-    color: #b71c1c;
+    color: #e21832;
     box-shadow: none;
     border-radius: 0;
   }
@@ -178,7 +178,7 @@ footer {
   }
   #navbar-mobile a:hover,
   #navbar-mobile a:focus {
-    color: #b71c1c;
+    color: #e21832;
   }
   .site-banner img,
   body > div img {
@@ -240,7 +240,7 @@ body, html {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  color: #b71c1c;
+  color: #e21832;
   text-align: center;
 }
 
@@ -268,12 +268,89 @@ body, html {
 #navbar {
   position: sticky;
   top: 0;
-  background-color: #ffffff;
+  background-color: #000000;
   border-bottom: 1px solid #e5e7eb;
   z-index: 1000;
   padding: 0.7rem 0 0.4rem 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   min-height: 48px;
+}
+
+/* Layout: make logo inline with the navbar and push links to the right */
+#navbar .nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  position: relative; /* positioning context for .nav-highlight */
+}
+
+#navbar .brand {
+  display: flex;
+  align-items: center;
+}
+
+#navbar .brand img {
+  width: 400px; /* requested size */
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+#navbar .nav-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto; /* push the nav links to the right */
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  flex-wrap: nowrap; /* keep links on one row */
+}
+
+/* Prevent label wrapping so the highlight measures the full label width */
+#navbar .nav-links a {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  #navbar .brand img { width: 90px; }
+}
+
+/* Top logo bar -- explicit reset to prevent any gap above it */
+.logo-bar {
+  line-height: 5.5ex;
+  background-color: #e21832;
+  
+  width: 100%;
+  height: 5.5ex;
+  margin: 0;
+  padding: 0;
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  border-top: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1201; /* sit above other elements */
+}
+
+/* Reset paragraph margins inside the logo bar to prevent margin collapse creating a gap above it */
+.logo-bar p {
+  margin: 0;
+  padding-left: 16em;
+  font-size: 1.076923076923077em;
+  display: block;
+  text-align: left;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #main-content {
@@ -298,7 +375,7 @@ body, html {
 #navbar a {
   padding: 0.3rem 0.7rem;
   font-weight: 500;
-  color: #23272f;
+  color: #ffffff;
   text-decoration: none;
   font-family: 'Lexend', Arial, Helvetica, sans-serif;
   position: relative;
@@ -311,22 +388,24 @@ body, html {
 
 #navbar a:hover,
 #navbar a:focus {
-  color: #b71c1c;
-  background: #f5f5f5;
+  color: #e21832;
+  background: #252525;
 }
 
 #navbar a.active {
-  color: #b71c1c;
+  color: #e21832;
   font-weight: 700;
 }
 
 #navbar .nav-highlight {
   position: absolute;
-  bottom: 0;
-  height: 3px;
-  background: #b71c1c;
-  transition: left 0.3s, width 0.3s;
+  /* lift the slider closer to the label text */
+  bottom: 55px;
+  height: 2px;
+  background: #e21832;
+  transition: left 0.3s, width 0.3s, opacity 0.2s;
   z-index: 0;
+  border-radius: 2px;
 }
 
 /* ====================== CONTENT ====================== */
@@ -403,7 +482,7 @@ p, li, ul {
 }
 
 .fundraising-list li::marker {
-  color: #b71c1c; /* UMD red for the bullet */
+  color: #e21832; /* UMD red for the bullet */
 }
 
 
@@ -421,7 +500,7 @@ p, li, ul {
   z-index: 1100;
   width: 44px;
   height: 44px;
-  color: #b71c1c;
+  color: #e21832;
   /* No background or border-radius for transparency */
   display: flex;
   flex-direction: column;
@@ -435,7 +514,7 @@ p, li, ul {
   width: 28px;
   height: 4px;
   margin: 5px 0;
-  background: #b71c1c;
+  background: #e21832;
   border-radius: 2px;
   transition: transform 0.2s cubic-bezier(.4,0,.2,1), opacity 0.2s cubic-bezier(.4,0,.2,1);
   position: relative;
@@ -548,7 +627,7 @@ p, li, ul {
 
   #navbar-mobile a:hover,
   #navbar-mobile a:focus {
-    color: #b71c1c;
+    color: #e21832;
   }
 
   .site-banner img,

@@ -8,18 +8,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lexend:wght@100..900&display=swap"
+    rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="shellIcon.png">
 </head>
 
-<body>
+<body style="padding: 0px; margin: 0px;">
 
   <!-- Logo -->
-  <div style="text-align: center; padding-bottom: 8px;">
-    <a onclick="showPage('home', '#home')">
-      <img src="campusPantryLogo.png" alt="UMD Club Gymnastics" style="width: 40%; margin-bottom: 0px; margin-top: 0px; padding: 0px;">
-    </a>
+  <div class="logo-bar">
+    <p>UNIVERSITY OF MARYLAND</p>
   </div>
+
 
   <!-- Hamburger and overlay -->
   <button id="navToggle" class="hamburger" aria-label="Toggle navigation">
@@ -31,14 +35,21 @@
 
   <!-- Desktop Navbar -->
   <nav id="navbar">
-    <ul>
-      <li><a onclick="showPage('home', '#home')" class="active">Home</a></li>
-      <li><a onclick="showPage('about', '#about')">About</a></li>
-      <li><a onclick="showPage('schedule', '#schedule')">Schedule</a></li>
-      <li><a onclick="showPage('fundraising', '#fundraising')">Fundraising</a></li>
-      <li><a onclick="showPage('contact', '#contact')">Contact</a></li>
+    <div class="nav-inner">
+      <a class="brand" onclick="showPage('home', '#home')" aria-label="UMD Campus Pantry home">
+        <img src="logoWhite.png" alt="UMD Campus Pantry" />
+      </a>
+
+      <ul class="nav-links">
+        <li><a data-page="home" onclick="showPage('home', '#home')" class="active">Home</a></li>
+        <li><a data-page="workwithus" onclick="showPage('workwithus', '#workwithus')">Work with Us</a></li>
+        <li><a data-page="findus" onclick="showPage('findus', '#findus')">Find Us</a></li>
+        <li><a data-page="donations" onclick="showPage('donations', '#donations')">Donations</a></li>
+        <!--<li><a data-page="contact" onclick="showPage('contact', '#contact')">Contact</a></li>-->
+      </ul>
+
       <div class="nav-highlight" id="navHighlight"></div>
-    </ul>
+    </div>
   </nav>
 
   <!-- Sidebar container (empty, JS will inject clone here) -->
@@ -48,28 +59,25 @@
   <div id="main-content">
     <div id="home" class="page-block active">
       <h1 style="justify-self: center;">Welcome to the UMD Campus Pantry</h1>
-      <p style="justify-self: center;">Now open at <strong>South Campus Dining Hall</strong> at the University of Maryland!</p>
+      <p style="justify-self: center;">Now open at <strong>South Campus Dining Hall</strong> at the University of
+        Maryland!</p>
 
-      <p>Approximately 20 percent of University of Maryland students lack reliable access to sufficient quantities of affordable and nutritious food. Join us in creating a hunger free UMD.</p>
+      <p>Approximately 20 percent of University of Maryland students lack reliable access to sufficient quantities of
+        affordable and nutritious food. Join us in creating a hunger free UMD.</p>
 
-      <p>The UMD Campus Pantry is open to help students, faculty and staff experiencing food insecurity. Swipe your UID before entering and check out before leaving. Be sure to bring a reusable bag.</p>
-
-      <p>Our team competes under USA Gymnastics Level 9 rules, but members can choose their own level based on comfort
-        and experience. Meets are optional but encouraged!</p>
-
-      <p>We practice in an open-gym style format with coach-led spotting, corrections, and conditioning. Team members
-        are welcome to train at their own pace.</p>
-
-      <p>Members can purchase club-branded Under Armour gear at a team discount each semester.</p>
-
-      <p>Stay connected and follow us on social media for team updates, photos, and announcements!</p>
-
+      <p>The UMD Campus Pantry is open to help students, faculty and staff experiencing food insecurity. Swipe your UID
+        before entering and check out before leaving. Be sure to bring a reusable bag.</p>
+      <div class="card">
+        <h2 class="card-subtitle">Pantry Hours</h2>
+        <ul class="schedule-list">
+          <li><strong>Monday - Friday:</strong> 10:00 AM - 5:00 PM</li>
+          <li><strong>Saturday - Sunday:</strong> Closed</li>
+        </ul>
+      </div>
     </div>
-    <div id="about" class="page-block">
-      <h2>About Us</h2>
-      <p>The Maryland Club Gymnastics Team is established for the expressed purpose of extending the opportunity of
-        competitive gymnastics to all who are interested and to provide a positive gymnastics experience for all
-        participants.</p>
+    <div id="workwithus" class="page-block">
+      <h2>Work with Us</h2>
+      <p><strong>I reused this from a different website so everything is about Gymnastics lmao</strong></p>
 
       <p>We welcome members of all levels and abilities—from beginners to Level 10 gymnasts—and compete in 2–3 meets per
         semester around the mid‑Atlantic, as well as attending NAIGC Nationals each April.</p>
@@ -107,34 +115,42 @@
 
 
     </div>
-    <div id="schedule" class="page-block">
-      <h2>Club Schedules</h2>
+    <div id="findus" class="page-block">
+      <h2>Find Us</h2>
       <div class="schedule-cards-container">
         <div class="card">
-          <h3 class="card-subtitle">Practice Times</h3>
+          <h3 class="card-subtitle">To Be Implemented</h3>
           <ul class="schedule-list">
-            <li><strong>Tuesdays:</strong> 8:30 – 10:30 p.m.</li>
-            <li><strong>Saturdays:</strong> 6:30 – 8:30 p.m.</li>
+            <li><strong>Google Map Location</strong></li>
           </ul>
-          <p class="note">Check the team email or GroupMe for practice updates and changes.</p>
+          <p class="note">TBA
+          </p>
         </div>
         <div class="card">
-          <h3 class="card-subtitle">Competition Schedule</h3>
+          <h3 class="card-subtitle">Pantry Scheduel</h3>
           <ul class="schedule-list">
-            <li><strong>November 69th, 2025</strong> - Fall Home Competition: Terrapin Invitational- School of Public
-              Health, University of Maryland </li>
+            <li>Schedule again</li>
           </ul>
         </div>
       </div>
 
     </div>
-    <div id="fundraising" class="page-block">
-      <h2>Fundraising Oppurtunities</h2>
-      <p>Fundraising is one of the most important aspects of our student-run sports club. In order to compete for our
-        team at Nationals, you are expected to participate in fundraising, which goes towards your payment for the trip.
-      </p>
+    <div id="donations" class="page-block">
+      <h2>Donation Opportunities</h2>
+      <p><strong>I reused this from a different website so everything is about Gymnastics lmao</strong></p>
       <div class="section-end"></div>
-      <h2>Fundraising Requirements</h2>
+      <h2>Monetary Donations</h2>
+      <ul class="fundraising-list">
+        <li>All gymnasts are encouraged to participate in fundraising.</li>
+        <li>Members who are interested in, or definitely attending Nationals <strong>must</strong> participate in
+          fundraising.</li>
+        <li>As a student-run club, we receive limited funding from the University—Nationals fees are the responsibility
+          of each attending member.</li>
+        <li>Any money a member fundraises is applied directly to their personal Nationals cost.</li>
+        <li>Members who meet the fundraising goal for Nationals can typically attend the trip at no personal cost.</li>
+        <li>Most of our members attend Nationals for free each year by meeting their fundraising goals.</li>
+      </ul>
+      <h2>Food Donations</h2>
       <ul class="fundraising-list">
         <li>All gymnasts are encouraged to participate in fundraising.</li>
         <li>Members who are interested in, or definitely attending Nationals <strong>must</strong> participate in
@@ -147,7 +163,7 @@
       </ul>
 
     </div>
-    <div id="contact" class="page-block">
+    <!--<div id="contact" class="page-block">
       <h2>Contact Us</h2>
       <p><span style="font-weight: bold;">President:</span> Quinlan Ngo</p>
       <p><span style="font-weight: bold;">Vice President:</span> Quinlan Non Governmental Organization</p>
@@ -170,7 +186,7 @@
           style="width:100%;min-height:1000px;aspect-ratio:1/1.3;border:none;" allowfullscreen loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">Loading…</iframe>
       </div>
-    </div>
+    </div>-->
   </div>
 
   <!-- Scripts -->
@@ -196,8 +212,10 @@
           target.classList.add('active');
         }
 
-        document.querySelectorAll('#navbar a').forEach(link => link.classList.remove('active'));
-        const clicked = Array.from(document.querySelectorAll('#navbar a')).find(link => link.textContent.toLowerCase() === pageId);
+        // Only consider the actual nav links (ignore the brand/logo link)
+        document.querySelectorAll('#navbar .nav-links a').forEach(link => link.classList.remove('active'));
+        // Match by data-page so labels with spaces still map to the correct pageId
+        const clicked = Array.from(document.querySelectorAll('#navbar .nav-links a')).find(link => (link.dataset.page || '').toLowerCase() === pageId);
         if (clicked) clicked.classList.add('active');
 
         moveHighlight(clicked);
@@ -221,13 +239,26 @@
 
     function moveHighlight(targetLink) {
       const highlight = document.getElementById('navHighlight');
-      if (!targetLink || !highlight) return;
-      highlight.style.width = `${targetLink.offsetWidth}px`;
-      highlight.style.left = `${targetLink.offsetLeft}px`;
+      const container = document.querySelector('#navbar .nav-inner');
+      if (!targetLink || !highlight || !container) return;
+      // Compute coordinates relative to the nav-inner container so logo is ignored
+      const linkRect = targetLink.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+      const left = Math.round(linkRect.left - containerRect.left);
+      const width = Math.round(linkRect.width);
+
+      // Make the highlight slightly narrower than the full link width so it sits closer to the label
+      const shrinkFactor = 0.85; // 85% of link width
+      const minWidth = 24; // don't make the slider too small for short labels
+      const newWidth = Math.max(minWidth, Math.round(width * shrinkFactor));
+      const newLeft = left + Math.round((width - newWidth) / 2);
+
+      highlight.style.width = `${newWidth}px`;
+      highlight.style.left = `${newLeft}px`;
     }
 
     window.addEventListener('resize', () => {
-      const activeLink = document.querySelector('#navbar a.active');
+      const activeLink = document.querySelector('#navbar .nav-links a.active');
       if (activeLink) moveHighlight(activeLink);
     });
 
@@ -240,9 +271,9 @@
       const hash = window.location.hash;
       const routes = {
         '#home': 'home',
-        '#about': 'about',
-        '#schedule': 'schedule',
-        '#fundraising': 'fundraising',
+        '#workwithus': 'workwithus',
+        '#findus': 'findus',
+        '#donations': 'donations',
         '#contact': 'contact'
       };
       let page, pageHash;
@@ -259,8 +290,8 @@
           home.style.display = 'block';
           home.classList.add('active');
         }
-        document.querySelectorAll('#navbar a').forEach(link => link.classList.remove('active'));
-        const homeLink = Array.from(document.querySelectorAll('#navbar a')).find(link => link.textContent.toLowerCase() === 'home');
+        document.querySelectorAll('#navbar .nav-links a').forEach(link => link.classList.remove('active'));
+        const homeLink = Array.from(document.querySelectorAll('#navbar .nav-links a')).find(link => (link.dataset.page || '').toLowerCase() === 'home');
         if (homeLink) homeLink.classList.add('active');
         moveHighlight(homeLink);
         history.replaceState({ pageId: 'home' }, '', '#home');
@@ -270,7 +301,7 @@
         pageHash = hash;
       }
       showPage(page, pageHash);
-      const activeLink = document.querySelector('#navbar a.active');
+      const activeLink = document.querySelector('#navbar .nav-links a.active');
       if (activeLink) moveHighlight(activeLink);
     });
 
@@ -324,7 +355,7 @@
 
   <footer
     style="width:100%;text-align:center;padding:1.2rem 0 0.7rem 0;font-size:0.98rem;color:#888;background:transparent;letter-spacing:0.02em;">
-    &copy; UMD Club Gymnastics 2025
+    &copy; INST362 Section 0302 Team 7 2025
   </footer>
   </footer>
 
