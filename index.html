@@ -37,7 +37,7 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a class="brand" onclick="showPage('home', '#home')" aria-label="UMD Campus Pantry home">
-        <img id="logoImg" src="logoWhite.png" alt="UMD Campus Pantry" />
+        <img id="logoImg" src="logoRednWhite.png" alt="UMD Campus Pantry" />
       </a>
 
       <ul class="nav-links">
@@ -59,7 +59,8 @@
   <!-- Page Content -->
   <div id="main-content">
     <div id="home" class="page-block active">
-      <h1 style="justify-self: center;">Welcome to the UMD Campus Pantry</h1>
+      <h1 style="justify-self: center;">Welcome to the <span style="color: #e21832;">UMD Campus Pantry</span></h1>
+      <div class="section-end"></div>
       <p style="justify-self: center;">Now open at <strong>South Campus Dining Hall</strong> at the University of
         Maryland!</p>
 
@@ -72,9 +73,16 @@
         <li>Swipe your UID before entering and check out before leaving.</li>
         <li>Be sure to bring a reusable bag.</li>
       </ul>
-      <p style="justify-self: center; font-weight: bold;"><a class="link" href="#donations"
-          onclick="showPage('donations', '#donations')">Go to Donations.</a></p>
+
       <div class="schedule-cards-container">
+        <div class="card">
+          <h2 class="card-subtitle">Join Us Today</h2>
+          <ul class="schedule-list">
+            <li><a class="redirect-link" href="#donations" onclick="showPage('donations', '#donations')">Donations</a></li>
+            <li><a class="redirect-link" href="#workwithus" onclick="showPage('workwithus', '#workwithus')">Work with Us</a></li>
+          </ul>
+          
+        </div>
         <div class="card">
           <h2 class="card-subtitle">Pantry Hours</h2>
           <ul class="schedule-list">
@@ -426,12 +434,19 @@
       function updateLogo(e) {
         if (e.matches) {
           // Screen is ≤ 768px
-          logo.src = "logoBlack.png?v=" + Date.now();
+          logo.src = "logoOG.png";
+          logo.parentElement.style.width = "500px";
+          logo.style.left = "-10%";
+          logo.style.position = "relative";
           bC.style.left = "0%";
           bCL.style.left = "0%";
         } else {
           // Screen is > 768px
-          logo.src = "logoWhite.png?v=" + Date.now();
+          //reset to original logo styles
+          logo.src = "logoRednWhite.png";
+          logo.parentElement.style.width = "";
+          logo.style.left = "";
+          logo.style.position = "";
           bC.style.left = "30%";
           bCL.style.left = "42%";
         }
@@ -447,6 +462,10 @@
     swapLogoOnResize();
 
   </script>
+  <!--Back to top button-->
+  <div style="height:50px; position:relative; left: 95%;">
+    <a href="#top" class="back-to-top" aria-label="Back to top">&#8679;</a>
+  </div>
 
   <footer
     style="width:100%;text-align:center;padding:1.2rem 0 0.7rem 0;font-size:0.98rem;color:#888;background:transparent;letter-spacing:0.02em;">
