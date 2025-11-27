@@ -218,6 +218,7 @@ body, html {
   font-family: 'Lexend', sans-serif;
   background-color: #f9f9f9;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .section-title {
@@ -498,6 +499,19 @@ p, li, ul {
   cursor: pointer;
 }
 
+.redirect-link {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: #e21832;
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.accent{
+  color: #e21832;
+}
+
 .iframe-container {
   position: relative;
   width: 100%;
@@ -517,6 +531,25 @@ p, li, ul {
   border: 0;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #e21832;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+  /*switch to a slightly lighter red on hover*/
+  background-color: #fc1d3a;
+}
 
 /* ====================== HAMBURGER SIDEBAR (MOBILE) ====================== */
 
