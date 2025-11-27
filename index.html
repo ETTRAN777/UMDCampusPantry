@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lexend:wght@100..900&display=swap"
     rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="shellIcon.png">
+  <link rel="icon" type="image/x-icon" href="icon.png">
 </head>
 
 <body style="padding: 0px; margin: 0px;">
@@ -78,10 +78,12 @@
         <div class="card">
           <h2 class="card-subtitle">Join Us Today</h2>
           <ul class="schedule-list">
-            <li><a class="redirect-link" href="#donations" onclick="showPage('donations', '#donations')">Donations</a></li>
-            <li><a class="redirect-link" href="#workwithus" onclick="showPage('workwithus', '#workwithus')">Work with Us</a></li>
+            <li><a class="redirect-link" href="#donations" onclick="showPage('donations', '#donations')">Donations</a>
+            </li>
+            <li><a class="redirect-link" href="#workwithus" onclick="showPage('workwithus', '#workwithus')">Work with
+                Us</a></li>
           </ul>
-          
+
         </div>
         <div class="card">
           <h2 class="card-subtitle">Pantry Hours</h2>
@@ -460,12 +462,25 @@
     }
 
     swapLogoOnResize();
-
   </script>
   <!--Back to top button-->
-  <div style="height:50px; position:relative; left: 95%;">
-    <a href="#top" class="back-to-top" aria-label="Back to top">&#8679;</a>
+  <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <button style="border: none;" id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
   </div>
+  <script>
+    document.getElementById('backToTop').addEventListener('click', e => {
+      // Prevent any default behavior
+      e.preventDefault();
+      console.log('Back to top button clicked');
+
+      // Find the currently visible page block
+      const activeBlock = document.querySelector('.logo-bar');
+      if (activeBlock) {
+        // Smooth scroll to the top of that block
+        activeBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  </script>
 
   <footer
     style="width:100%;text-align:center;padding:1.2rem 0 0.7rem 0;font-size:0.98rem;color:#888;background:transparent;letter-spacing:0.02em;">
