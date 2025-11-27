@@ -291,7 +291,6 @@ body, html {
 #navbar .brand {
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 
 #navbar .brand img {
@@ -315,7 +314,6 @@ body, html {
 #navbar .nav-links a {
   white-space: nowrap;
   display: inline-block;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -326,6 +324,7 @@ body, html {
 .logo-bar {
   line-height: 5.5ex;
   background-color: #e21832;
+  
   width: 100%;
   height: 5.5ex;
   margin: 0;
@@ -345,19 +344,13 @@ body, html {
   margin: 0;
   padding-left: 16em;
   font-size: 1.076923076923077em;
-  cursor: pointer;
   display: block;
   text-align: left;
+  color: #ffffff;
   font-weight: 600;
   font-family: "Crimson Text", serif;
   font-weight: 400;
   font-style: normal;
-  color: #ffffff;
-}
-
-.logo-bar p a {
-  color: #ffffff;
-  text-decoration: none;
 }
 
 #main-content {
@@ -495,7 +488,6 @@ p, li, ul {
 .link {
   color: #e21832;
   text-decoration: underline;
-  cursor: pointer;
 }
 
 .iframe-container {
@@ -620,11 +612,6 @@ p, li, ul {
     align-items: center;
     padding-left: 0;
     text-align: center;
-  }
-
-  .brand{
-    top:50px; 
-    position: relative;
   }
 
   .logo-bar p {
