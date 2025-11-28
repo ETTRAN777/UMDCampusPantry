@@ -346,7 +346,6 @@ body, html {
   margin: 0;
   padding-left: 16em;
   font-size: 1.076923076923077em;
-  cursor: pointer;
   display: block;
   text-align: left;
   font-weight: 600;
@@ -359,6 +358,7 @@ body, html {
 .logo-bar p a {
   color: #ffffff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 #main-content {
@@ -752,3 +752,4 @@ p, li, ul {
     height: 500px;
   }
 }
+
