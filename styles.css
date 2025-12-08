@@ -551,6 +551,15 @@ p, li, ul {
   background-color: #fc1d3a;
 }
 
+/* ====================== MISC STYLES ====================== */
+::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 0; /* Optional: also set width to 0 for certainty */
+    height: 0; /* Optional: for horizontal scrollbars */
+}
+
 /* ====================== HAMBURGER SIDEBAR (MOBILE) ====================== */
 
 #navToggle {
@@ -752,4 +761,5 @@ p, li, ul {
     height: 500px;
   }
 }
+
 
