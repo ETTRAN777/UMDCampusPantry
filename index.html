@@ -46,7 +46,7 @@
         <li><a data-page="findus" onclick="showPage('findus', '#findus')">Find Us</a></li>
         <li><a data-page="donations" onclick="showPage('donations', '#donations')">Donations</a></li>
         <li><a data-page="resources" onclick="showPage('resources', '#resources')">Resources</a></li>
-        <!--<li><a data-page="contact" onclick="showPage('contact', '#contact')">Contact</a></li>-->
+        <li><a data-page="research" onclick="showPage('research', '#research')">Research</a></li>
       </ul>
 
       <div class="nav-highlight" id="navHighlight"></div>
@@ -264,6 +264,15 @@
         </div>
       </div>
     </div>
+    <div id="research" class="page-block">
+      <h2>Research</h2>
+      <p>This website was brought to you by INST362 Section 0302 Team 7's User Centered Design Research</p>
+      <div class="section-end"></div>
+      <div class=" schedule-cards-container">
+        <div class="card">
+          <h3 class="card-subtitle">Research Website</h3>
+          <p>To view our research process, findings, and design iterations, please visit our <a class="link"href="https://sites.google.com/terpmail.umd.edu/umdpantryredesign/" target="_blank">research website</a></p>
+    </div>
   </div>
 
   <!-- Scripts -->
@@ -351,7 +360,8 @@
         '#workwithus': 'workwithus',
         '#findus': 'findus',
         '#donations': 'donations',
-        '#resources': 'resources'
+        '#resources': 'resources',
+        '#research' : 'research'
       };
       let page, pageHash;
       if (!hash || hash === '#' || hash === '#home') {
@@ -491,4 +501,5 @@
 </body>
 
 </html>
+
 
