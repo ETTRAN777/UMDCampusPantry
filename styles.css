@@ -408,7 +408,7 @@ body, html {
 #navbar .nav-highlight {
   position: absolute;
   /* lift the slider closer to the label text */
-  bottom: 55px;
+  bottom: 50px;
   height: 2px;
   background: #e21832;
   transition: left 0.3s, width 0.3s, opacity 0.2s;
@@ -761,5 +761,6 @@ p, li, ul {
     height: 500px;
   }
 }
+
 
 
